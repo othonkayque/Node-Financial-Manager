@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/upload" method="post">
+            <div class="inputs">
+                <input type="text" name="titulo_despesa" id="tarefa" placeholder="Despesa" required>
+                <input type="text" name="valor_despesa" id="gasto" placeholder="Gasto" required>
+                <button class="btn">Ok</button>            
+            </div>
+        </form>
+        <div class="listaGastos">
+            <div class="gastos">
+                <p>Total:</p>
+                <p class="valor"></p>
+             </div>
+            </div>
+            <div class="despesas">
+
+                <div class="despesa">
+                    <h3>Despesa</h3>
+                    <h3>0,00</h3>
+                </div>
+
+            </div>
+    </div>
+</body>
+<script src="/js/addElements.js"></script>
+</html>

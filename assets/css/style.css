@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
+:root {
+    --text-color: rgb(210,210,210);
+    --bg-color: rgb(45,45,45);
+    --second-color: rgb(70,70,70);
+    --primary-color: rgb(110,110,110);
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+    font-family: 'Oxanium';
+}
+
+button, input {
+    font-family: 'Oxanium';
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 5vh;
+}
+
+input {
+    border: solid var(--primary-color) 1px;
+    background-color: var(--second-color);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+input::selection {
+    
+    outline: none;
+}
+
+.inputs, .listaGastos {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    border: solid var(--second-color) 1px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px;
+    border-radius: 5px; 
+    cursor: pointer;  
+}
+
+.gastos {
+    display: flex;
+    background-color: var(--second-color);
+    border: solid var(--second-color) 1px;
+    border-radius: 5px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.despesas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.despesa {
+    width: 300px;
+    height: 90px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px
+}
