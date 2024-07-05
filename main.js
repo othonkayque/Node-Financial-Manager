@@ -1,6 +1,9 @@
+
 const fs = require('fs');
 const express = require('express');
 const app = express();
+
+
 
 app.use(express.static(__dirname + '/assets'))
 app.use(express.urlencoded({ extended:true }))
@@ -44,5 +47,21 @@ app.post('/upload', (req, res) => {
       });
   });
 });
+
+app.get('/delete/:id', (req, res) => {
+    var id = parseInt(req.params.id);
+
+    fs.readFile('data.json', 'utf-8', (err, data) => {
+        let jsonData = JSON.parse(data);
+        delete jsonData[id];
+        jsonData = jsonData.filter(item => item[id] !== id);
+
+        fs.writeFile('data.json', JSON.stringify(jsonData), (err) => {
+            return;
+        });
+    });
+    res.redirect('/')
+});
+
 
 app.listen(3333)
