@@ -1,1 +1,10 @@
-[{"despesa":"Aluguel","valor":"800"}]
+[
+  {
+    "despesa": "Aluguel",
+    "valor": "800"
+  },
+  {
+    "despesa": "Netflix",
+    "valor": "50"
+  }
+]
