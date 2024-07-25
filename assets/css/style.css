@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 
 :root {
-    --text-color: rgb(210,210,210);
-    --bg-color: rgb(45,45,45);
-    --second-color: rgb(70,70,70);
-    --primary-color: rgb(110,110,110);
+    --text-color: #CED4DA;
+    --bg-color: #212529;
+    --second-color: #495057;
+    --primary-color: #212529;
+    --button-color: #616DC0;
+
+    /*  Cores despesas*/
+    --plus500: #411774;
+    --plus100: #4F308C;
+    --less100: #534CB9;
+    --less100-text-color: #411774;
 }
 
 body, html {
@@ -48,14 +55,17 @@ input::selection {
     width: 200px;
     display: flex;
     flex-direction: column;
+    gap: .2rem;
 }
 
 .btn {
     border: solid var(--second-color) 1px;
-    background-color: var(--primary-color);
+    background-color: var(--button-color);
     color: white;
-    padding: 8px;
+    padding: .8rem;
     border-radius: 5px; 
+    font-weight: 700;
+    font-size:  20px;
     cursor: pointer;  
 }
 
@@ -86,4 +96,15 @@ input::selection {
     justify-content: space-around;
     align-items: center;
     margin: 5px
+}
+
+.plus100 {
+    background-color: var(--plus100);
+}
+.plus500 {
+    background-color: var(--plus500);
+}
+.less100 {
+    background-color: var(--less100);
+    color: var(--less100-text-color);
 }

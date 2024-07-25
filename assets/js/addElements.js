@@ -15,9 +15,20 @@ fetch('http://localhost:3333/data')
             var elemento = document.createElement("div")
             elemento.setAttribute('class', 'despesa')
             elemento.setAttribute('id', `${index}`)
+
             var despesa = `${element.despesa}`
             var valor_despesa = parseFloat(`${element.valor}`)
             elemento.innerHTML = `<h3>${despesa}</h3>` + `<h3>${valor_despesa}</h3>`;
+
+            if (valor_despesa >= 100) {
+                elemento.setAttribute('class', 'despesa plus500')
+            }
+            if (valor_despesa >= 500) {
+                elemento.setAttribute('class', 'despesa plus100')
+            }
+            else if (valor_despesa < 100) {
+                elemento.setAttribute('class', 'despesa less100')
+            }
 
             despesas.appendChild(elemento)
         });
